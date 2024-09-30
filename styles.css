@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -56,6 +61,8 @@ li a:hover {
 .section1 {
     background-color: rgb(245, 240, 230);
     display: inline-block;
+    width: 100%;
+    padding: 10px;
 }
 
 .section2 {
@@ -64,12 +71,15 @@ li a:hover {
     display: inline-block;
     font: 20px;
     width: 100%;
+    padding: 10px;
+    
 }
 
 .section3 {
     background-color: rgb(245, 240, 230);
     display: inline-block;
     width: 100%;
+    padding: 10px;
 }
 
 .wrapper {
@@ -84,4 +94,36 @@ li a:hover {
     justify-items: center;
     background-color: #182b49;
     color: white;
+}
+
+@media screen and (max-width: 800px) {
+    li{
+        display: none;
+    }
+    .header img{
+        max-width: 75%;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .one, .two, .three, .four {
+        padding: 10px;
+        font-size: 20px;
+        justify-items: center;
+        background-color: #182b49;
+        color: white;
+    }
 }
